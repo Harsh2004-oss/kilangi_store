@@ -1,0 +1,1818 @@
+/* Reset & Base Styles */
+:root {
+    --primary-green: #1a3c34;
+    --nav-beige: #efe2d9;
+    --text-dark: #1a3c34;
+    --text-white: #ffffff;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+    --container-width: 1300px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity var(--transition-speed);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    padding: 10px 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.top-bar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.promo-text {
+    letter-spacing: 0.5px;
+}
+
+.social-icons {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+/* Main Header */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+/* Search Bar */
+.search-wrapper {
+    flex: 1;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    padding: 8px 20px;
+    width: 300px;
+    transition: border-color var(--transition-speed);
+}
+
+.search-bar:focus-within {
+    border-color: var(--primary-green);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.search-bar ion-icon {
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Logo */
+.logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-icon {
+    margin-bottom: 5px;
+}
+
+.logo h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: var(--primary-green);
+    margin: 0;
+    line-height: 1;
+}
+
+/* User Actions */
+.user-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.user-actions ion-icon {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+/* Navigation */
+.main-nav {
+    background-color: var(--nav-beige);
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-list a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4a4a4a;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.nav-list a:hover {
+    color: var(--primary-green);
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+}
+
+.hero-split {
+    display: flex;
+    width: 100%;
+}
+
+.hero-left,
+.hero-right {
+    flex: 1;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-left img,
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    height: 600px;
+}
+
+.hero-overlay-text {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    right: 60px;
+    z-index: 10;
+    color: var(--text-white);
+    max-width: 500px;
+}
+
+.hero-overlay-text h2 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-overlay-text h2 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-overlay-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.5;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-explore {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: var(--text-dark);
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn-explore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Features Banner */
+.features-banner {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-item ion-icon {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.feature-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+/* Bestsellers Section */
+.bestsellers-section {
+    padding: 80px 60px;
+    /* Match Hero text alignment */
+    background-color: #fffdfb;
+}
+
+.bestsellers-section .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.section-heading {
+    text-align: left;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.section-heading em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Filter Pills */
+.filter-pills {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid #7f8c8d;
+    /* Grey border */
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.pill.active {
+    background-color: var(--primary-green);
+    color: #fff;
+    border-color: var(--primary-green);
+}
+
+.pill:hover:not(.active) {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    background-color: transparent;
+    /* Seamless blend */
+    margin-bottom: 15px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.05));
+    /* Subtle shadow for depth */
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+    /* Gentle zoom */
+}
+
+.product-info h3 {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    /* Smaller, cleaner */
+    font-weight: 700;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.current-price {
+    font-weight: 800;
+    /* Extra bold */
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 10px;
+}
+
+.swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.swatch.gold {
+    background-color: #eedc82;
+}
+
+.swatch.silver {
+    background-color: #bdc3c7;
+}
+
+/* Active swatch indication (ring around it) */
+.swatch.active::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+
+/* Action Area */
+.action-area {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-green);
+    color: white;
+    padding: 15px 40px;
+    font-weight: 700;
+    gap: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #122b25;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-split {
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-left img,
+    .hero-right img {
+        height: 500px;
+    }
+
+    .hero-overlay-text {
+        bottom: 40px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-inner {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .social-icons {
+        position: static;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 2;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .logo {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .user-actions {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Bestseller Mobile */
+    .filter-pills {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        flex-wrap: nowrap;
+        /* Horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .section-heading {
+        font-size: 2.2rem;
+    }
+
+    .bestsellers-section {
+        padding: 40px 20px;
+    }
+}
+
+/* Recently Viewed Section */
+.recently-viewed-section {
+    padding: 80px 60px;
+    background-color: #ead8ce;
+    /* Dusty pink/beige from image */
+}
+
+.recently-viewed-section .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.recently-viewed-section .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* Bolder than Bestseller header */
+    color: #1a3c34;
+    /* Dark green */
+    margin-bottom: 40px;
+}
+
+/* 4 Column Grid for Recently Viewed */
+.product-grid.four-col {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-grid.four-col .product-card {
+    flex: 1;
+    min-width: 0;
+    /* Flexbox overflow fix */
+}
+
+.recently-viewed-section .product-image {
+    background-color: #ffffff;
+    /* White bg for these cards in image */
+    margin-bottom: 15px;
+}
+
+.recently-viewed-section .product-image img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+@media (max-width: 900px) {
+    .product-grid.four-col {
+        flex-wrap: wrap;
+    }
+
+    .product-grid.four-col .product-card {
+        flex: 1 1 45%;
+        /* 2 cols */
+    }
+}
+
+@media (max-width: 600px) {
+    .recently-viewed-section {
+        padding: 40px 20px;
+    }
+
+    .product-grid.four-col .product-card {
+        flex: 1 1 100%;
+        /* 1 col */
+    }
+}
+
+/* Gift Section */
+.gift-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-title-center {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    /* Adjusted size */
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 1.4;
+    color: #1a3c34;
+    /* Dark green brand color */
+    font-weight: 600;
+}
+
+.section-title-center em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.gift-content {
+    display: flex;
+    gap: 30px;
+}
+
+.gift-left {
+    flex: 1;
+    overflow: hidden;
+}
+
+.gift-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    /* Taller lifestyle shot */
+}
+
+.gift-right-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center button below image */
+}
+
+.grid-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 1px solid #7f8c8d;
+    /* Grey border */
+    padding: 12px 20px;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: #1a3c34;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    background: transparent;
+    width: 100%;
+    /* Full width button in grid item often looks clean, or auto */
+    max-width: 200px;
+}
+
+.btn-outline:hover {
+    border-color: #1a3c34;
+    background-color: #f9f9f9;
+}
+
+/* Promo Banners Section */
+.promo-banners {
+    width: 100%;
+    /* Full width, no container padding */
+}
+
+.promo-split {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    /* Taller for drama */
+    gap: 20px;
+    /* Gap between banners seen in image */
+    padding: 0 20px;
+    /* Matching Hero side padding logic if desired, or full width. Image seems full width but split. Let's add gap. */
+    background-color: #fff;
+    /* Gap color */
+}
+
+.promo-item {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.promo-item:hover img {
+    transform: scale(1.03);
+}
+
+.promo-overlay {
+    position: absolute;
+    bottom: 50px;
+    max-width: 80%;
+    color: #fff;
+    z-index: 10;
+}
+
+.promo-overlay.left {
+    left: 50px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Ensure readability */
+}
+
+.promo-overlay.right {
+    left: 50px;
+    /* Aligned left as per image */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.promo-overlay h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #fff;
+    /* Always white on these dark/rich images */
+}
+
+.promo-overlay h2 em {
+    font-style: italic;
+}
+
+.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent dark or mimic button */
+    background-color: #4a4a4a;
+    /* Greyish button from image */
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.btn-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #1a3c34;
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Responsive Gift & Promo */
+@media (max-width: 900px) {
+    .gift-content {
+        flex-direction: column;
+    }
+
+    .promo-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .promo-item {
+        height: 400px;
+    }
+
+    .section-title-center {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gift-right-grid {
+        grid-template-columns: 1fr;
+        /* Stack vertically on very small screens? or keep 2x2 */
+        /* Image shows 2x2. Let's keep 2x2 unless tiny */
+    }
+
+    .promo-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .promo-overlay {
+        bottom: 30px;
+        left: 20px;
+    }
+}
+
+/* Collection Section */
+.collection-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.collection-section .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 30px;
+    /* Slight padding from edges */
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* 7 items equal width */
+    gap: 15px;
+}
+
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    /* Slight rounding or crisp? Image looks crisp. */
+    transition: transform 0.4s ease;
+}
+
+.collection-item:hover img {
+    transform: scale(1.05);
+}
+
+.collection-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a3c34;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s;
+}
+
+.collection-item:hover h3 {
+    text-decoration-color: #1a3c34;
+}
+
+/* Responsive Collection */
+@media (max-width: 1200px) {
+    .collection-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* Wrap to 4 cols */
+    }
+}
+
+@media (max-width: 600px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cols mobile */
+    }
+
+    .collection-item img {
+        margin-bottom: 10px;
+    }
+}
+
+/* Occasions Section */
+.occasions-section {
+    padding: 80px 0;
+    background-color: #ead8ce;
+    /* Matching beige/pink */
+}
+
+.occasions-section .section-title-center {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #4a4a4a;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.occasions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.occasion-card {
+    background-color: transparent;
+}
+
+.occasion-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.occasion-info h3 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.occasion-info p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 40px;
+    /* Align buttons */
+}
+
+.btn-dark-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a3c34;
+    /* Dark Green */
+    color: #fff;
+    padding: 10px 15px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    /* "Shop X Gifts" */
+    transition: background-color 0.3s;
+}
+
+.btn-dark-small:hover {
+    background-color: #122b25;
+}
+
+.action-area.center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-primary-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a3c34;
+    color: #fff;
+    padding: 14px 30px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.btn-primary-dark:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Occasions */
+@media (max-width: 900px) {
+    .occasions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .occasion-card img {
+        height: 300px;
+        /* Fixed height on mobile for consistency */
+    }
+
+    .occasions-section .section-title-center {
+        font-size: 2rem;
+    }
+}
+
+/* Ethos Section */
+.ethos-section {
+    padding: 100px 0;
+    background-color: #fffdfb;
+    /* Very light warm white */
+}
+
+.container-narrow {
+    max-width: 100%;
+    /* Full width */
+    margin: 0;
+    padding: 0;
+    /* Flush edges or slight padding? Let's go flush then padding on content */
+}
+
+.ethos-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.ethos-image {
+    flex: 0 0 30%;
+    /* Reduced from 50% flex:1 */
+}
+
+.ethos-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Clean sharp edges as per image */
+}
+
+.ethos-text {
+    flex: 1;
+    /* Takes remaining space */
+    padding: 0 80px;
+    /* More padding for text */
+}
+
+.ethos-label {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.ethos-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.ethos-title em {
+    font-style: italic;
+    font-weight: 400;
+    /* Lighter italic weight */
+}
+
+.ethos-desc {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Responsive Ethos */
+@media (max-width: 900px) {
+    .ethos-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .ethos-text {
+        text-align: center;
+        padding: 0 20px;
+        /* Ensure padding on mobile text */
+    }
+
+    .ethos-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Future Section */
+.future-section {
+    background-color: #fcece2;
+    /* Light peach match */
+    padding: 0;
+    overflow: hidden;
+}
+
+.future-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+}
+
+.future-image {
+    flex: 1;
+    height: 100%;
+}
+
+.future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.future-content {
+    flex: 1;
+    padding: 60px 80px;
+}
+
+.future-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a3c34;
+    /* Dark Green Text */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.future-title em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.future-desc {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.feature-item ion-icon {
+    font-size: 2rem;
+    color: #1a3c34;
+}
+
+.feature-item span {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.3;
+}
+
+/* Responsive Future */
+@media (max-width: 900px) {
+    .future-container {
+        flex-direction: column;
+    }
+
+    .future-image,
+    .future-content {
+        flex: auto;
+        width: 100%;
+    }
+
+    .future-content {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .future-title {
+        font-size: 2.2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .feature-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #fffdfb;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    text-align: left;
+}
+
+.review-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #444;
+    /* Dark stars as per image */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.review-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* Bold */
+    font-style: italic;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: right;
+    /* Aligned right */
+    color: #000;
+}
+
+.trust-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #1a3c34;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    /* Placeholder for icon */
+}
+
+.trust-item p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #1a3c34;
+    /* Brand Dark Green */
+    color: #fff;
+    padding-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    gap: 50px;
+}
+
+.footer-brand {
+    flex: 1.5;
+    max-width: 400px;
+}
+
+.footer-brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #fff;
+    /* White logo */
+}
+
+.footer-brand .logo h1 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.footer-brand .logo-icon {
+    font-size: 2.5rem;
+}
+
+.footer-brand p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.link-column h4 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 12px;
+}
+
+.link-column ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.link-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.copyright-bar {
+    background-color: #2c584d;
+    /* Slightly lighter/different shade for bar? Or keep same. Image shows a bar */
+    padding: 15px 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Responsive Footer/Reviews */
+@media (max-width: 1000px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 on tablet */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        /* Allow columns to wrap */
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        /* Stack reviews */
+    }
+
+    .trust-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .link-column {
+        width: 100%;
+        /* Full width columns */
+    }
+}
+
+/* Footer Logo Update */
+.footer-logo-img {
+    height: 50px;
+    /* Adjust based on new logo aspect ratio */
+    width: auto;
+    filter: brightness(0) invert(1);
+    /* Make it white to match dark footer */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer-brand .logo {
+    display: block;
+    /* Reset flex */
+    margin-bottom: 10px;
+}
+
+/* Header Logo */
+.header-logo-img {
+    height: 60px;
+    /* Bigger than footer */
+    width: auto;
+    display: block;
+    /* No filter needed if logo is dark and header is white */
+}
+
+/* Reset any flex constraints on logo container if needed */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #1a3c34;
+    /* Dark brand color or black? Let's go dark green for premium feel */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.top-bar-content p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Features Strip (Top Area) */
+.features-strip {
+    background-color: #fcece2;
+    /* Light Peach to match other accents, or distinct */
+    color: #1a3c34;
+    /* Dark text */
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: 1px solid #ead8ce;
+}
+
+.features-strip-content p {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Features Bar (Below Hero) */
+.features-bar {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.features-bar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.features-bar-content span {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+}
+
+.features-bar-content ion-icon {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Specific styling for star/sparkle icon if needed to look like image */
+.features-bar-content ion-icon[name="sparkles-outline"] {
+    transform: rotate(15deg);
+    /* playful tilt like image */
+}
+
+/* =========================================
+   FINAL RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* Hero */
+    .hero-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        height: 50vh;
+        /* Split screen vertically on phone */
+    }
+
+    .hero-right {
+        display: none;
+        /* Hide right image on mobile to focus on CTA? Or keep stacked? */
+        /* Let's keep it but maybe smaller */
+        height: 300px;
+    }
+
+    .hero-left {
+        height: 500px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Bestsellers */
+    .bestsellers-section {
+        padding: 40px 20px;
+    }
+
+    .filter-pills {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 15px;
+        padding-bottom: 10px;
+        /* Space for scrollbar */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Hide scrollbar for clean look */
+    }
+
+    .filter-pills::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-pills .pill {
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+    /* Features Bar (2x2 Grid) */
+    .features-bar-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .features-bar-content ion-icon {
+        display: none;
+        /* Hide separators */
+    }
+
+    .features-bar-content span {
+        font-size: 0.85rem;
+        /* Slightly smaller for mobile */
+    }
+
+    /* Collection Grid (7 cols -> 2 cols) */
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Occasions (3 cols -> 1 col) */
+    .occasions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gift & Promo */
+    .gift-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-banners {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .promo-item {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Ethos */
+    .ethos-content {
+        flex-direction: column;
+    }
+
+    .ethos-image {
+        flex: auto;
+        width: 100%;
+    }
+
+    .ethos-text {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .ethos-title {
+        font-size: 2rem;
+    }
+
+    /* Future Trend */
+    .future-container {
+        flex-direction: column;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cols is fine for icons */
+    }
+
+    .future-content {
+        padding: 40px 20px;
+    }
+
+    /* Testimonials */
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        /* Stack reviews */
+    }
+
+    .trust-grid {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .logo {
+        justify-content: center;
+        /* Center logo in footer */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* More specific mobile tweaks */
+    .hero-overlay-text h2 {
+        font-size: 2rem;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Keep 2 cols, tiny items */
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Missing Product Grids */
+    .product-grid,
+    .recently-viewed-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Ensure images in cards are scaled correctly */
+    .product-card img {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+}
